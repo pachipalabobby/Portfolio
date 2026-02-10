@@ -1,0 +1,47 @@
+.clients-section {
+    background-color: var(--bg-light);
+    padding: 60px 0;
+
+    .section-title {
+        margin-bottom: 3rem;
+
+        .title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+    }
+
+    .clients-row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        .client-logo {
+            font-size: 3rem;
+            color: var(--text-muted);
+            opacity: 0.5;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--primary-color);
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .clients-row {
+        gap: 2rem;
+
+        .client-logo {
+            font-size: 2.5rem;
+        }
+    }
+}

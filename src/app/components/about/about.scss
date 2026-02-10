@@ -1,0 +1,122 @@
+.about-section {
+    background-color: var(--bg-white);
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .col-left,
+    .col-right {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .section-title {
+        margin-bottom: 1.5rem;
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+    }
+
+    .description {
+        color: var(--text-muted);
+        line-height: 1.8;
+        margin-bottom: 2rem;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 1rem;
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(106, 17, 203, 0.1);
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: var(--primary-color);
+                color: white;
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+    .skill-bars {
+        .skill-item {
+            margin-bottom: 1.5rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+
+            .progress {
+                height: 100%;
+                background: var(--gradient-primary);
+                border-radius: 4px;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 5px;
+                    background: rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        .row {
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .section-title .title {
+            font-size: 2rem;
+        }
+    }
+}
